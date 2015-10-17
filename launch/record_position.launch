@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<group ns="record_position">
+		<arg name="folder" value="$(find record)/saved/" />
+		<node name="record_position_node" pkg="record" type="record_position_node" args="-fixed_frame world -target_frame_listener link_cylinder -save $(arg folder)" output="screen"/>	
+	</group>
+
+</launch>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="folder" value="$(find record)/saved/trajectory" />
+	<node name="record" pkg="record" type="record" args="--fixed_frame /world --target_frame /hand_root --record_folder $(arg folder)" output="screen"/>
+	
+
+</launch>

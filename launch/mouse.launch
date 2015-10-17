@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="topic" 		default="/record_pos_ft/record" />
+	<node name="mouse_node" pkg="record" type="mouse_node" args="-service $(arg topic)" required="true" output="screen"/>	
+
+</launch>

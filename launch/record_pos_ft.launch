@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+	<group ns="record_pos_ft">
+		<arg name="folder" value="$(find record)/saved/" />
+		<node name="record_pos_ft_node" pkg="record" type="record_pos_ft_node" args="-topic_name /tf_sensor/netft_data -fixed_frame link_socket -target_frame_listener plug_link -save $(arg folder) -rate 100" output="screen"/>	
+	</group>
+
+
+</launch>

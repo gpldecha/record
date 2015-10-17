@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+	<group ns="record_ft">
+		<arg name="folder" value="$(find record)/saved/" />
+		<node name="record_force_torque_node" pkg="record" type="record_force_torque_node" args="-topic_name /tf_sensor/netft_data -save $(arg folder) -rate 100" output="screen"/>	
+	</group>
+
+</launch>
